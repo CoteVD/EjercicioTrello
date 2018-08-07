@@ -1,0 +1,22 @@
+{
+  "name": "trello",
+  "version": "0.0.1",
+  "description": "Trabajo inspirando en Trello",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoteVD/Trello.git"
+  },
+  "keywords": [
+    "trello"
+  ],
+  "author": "María José Vargas Donoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoteVD/Trello/issues"
+  },
+  "homepage": "https://github.com/CoteVD/Trello#readme"
+}
