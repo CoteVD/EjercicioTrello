@@ -48,19 +48,45 @@
         <button class="btn pl-2 pr-2 pb-1 pt-1" id="btnName">
           <span class="text-center text-white">MJ</span>
         </button>
-
-
-
       </div>
     </div>
   </div>
-
+  <div class="container-fluid">
+    <div class="row" id="bottom">
+      <span>
+        <h6>Tablero-Reto de código</h6>
+      </span>
+      <span>
+        <i class="far fa-star"></i>
+      </span>
+      <span>
+        <i class="fas fa-lock"></i>
+      </span>
+      <span>
+        <p class="text-right">
+          <i class="fas fa-ellipsis-h"></i>Mostrar menú</p>
+      </span>
+    </div>
+  </div>
+  <div class="container-fluid" id="board">
+    <div class="list-wrapper">
+      <div class="input-group mb-3" id="addInput">
+        <input type="text" class="form-control" placeholder="Añadir una lista" aria-label="Username" aria-describedby="basic-addon1"
+          id="topInput" onclick="newList()">
+      </div>
+      <div id="cards">
+      </div>
+      <div class="cardLists" id="cardList">
+      </div>
+    </div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+  <script src="src/js/list.js"></script>
 </body>
 
 </html>
