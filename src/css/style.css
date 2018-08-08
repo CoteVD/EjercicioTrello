@@ -6,10 +6,18 @@
   background-color: black;
 }
 
+#bottom {
+  background-color: gray;
+}
+
 #logoTrello {
   width: 10%;
 }
 
 #btnName {
   border-radius: 20px;
+}
+
+.text-right {
+  margin-left: 544px;
 }
