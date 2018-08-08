@@ -1,0 +1,15 @@
+#tableBtn, #tableInput {
+  border-radius: 3px;
+}
+
+#topRow {
+  background-color: black;
+}
+
+#logoTrello {
+  width: 10%;
+}
+
+#btnName {
+  border-radius: 20px;
+}
