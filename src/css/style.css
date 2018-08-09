@@ -18,6 +18,10 @@
   border-radius: 20px;
 }
 
+#newList{
+  display: none;
+}
+
 .text-right {
   margin-left: 544px;
 }
