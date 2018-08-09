@@ -1,17 +1,85 @@
-#tableBtn, #tableInput {
+body{
+  background-color: #0079BF;
+  background-size: cover;
+  background-position: center center;
+	background-attachment: fixed;
+}
+
+.bell {
+  background-color: #00C2E0;
+}
+
+#tableBtn  {
+  background-color: hsla(0,0%,100%,.3);
+  color:#fff;
   border-radius: 3px;
+  font-weight: 700;
+  line-height: 32px;
+  padding-right: 5px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+}
+
+.form-control {
+background-color: hsla(0,0%,100%,.3);
+  border-radius: 3px;
+  border: none;
+  color: hsla(0,0%,100%,.5);
+  float: left;
+  font-size: 13px;
+  height: 32px;
+  margin: 0;
+  min-height: 32px;
+  padding-right: 32px;
+  padding-left: 8px;
+  line-height: 19px;
+  transition: width .15s;
+  width: 180px;
+  z-index: 1;
+}
+
+.btn-table {
+  background-color: #0079BF;
+  font-weight: 700;
+  color: #F6F6F6;
+  padding: 5px;
+  margin:5px;  
+}
+
+.btn-table:hover{
+  background-color:#0067A3;
+}
+
+.btn-table-menu{
+  background-color: #0079BF;
+  color: #F6F6F6;
+}
+
+.btn-table-menu:hover{
+  background-color:#0067A3;
+}
+
+.input-group-text{
+  border: none;
+  background-color: hsla(0,0%,100%,.3); 
+  color:#fff;
 }
 
 #topRow {
-  background-color: black;
+  background-color:#0067A3;
 }
 
-#bottom {
-  background-color: gray;
-}
-
-#logoTrello {
-  width: 10%;
+#logoTrello {  
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAeCAMAAACMnWmDAAACOlBMV…fSg7/x+x9a9Sf8tWb332QHQ+WEwToyWHAoBhDp5f/gmn8Ard3CvkoCRlIAAAAASUVORK5CYII=);
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: 80px 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
 }
 
 #btnName {

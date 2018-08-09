@@ -17,13 +17,15 @@
   <!--Barra de arriba con el input y los botones. No funcionales.-->
   <div class="container-fluid">
     <div class="row" id="topRow">
-      <div class="col-1 justify-content-center p-0 mr-1 mb-0">
-        <button type="button" class="btn ml-1 mt-1 pl-0 pt-1 pb-1 pr-2 text-white" id="tableBtn">
-          <i class="fab fa-trello d-inline p-2 text-white"></i>Tableros</button>
+      <div class="col-1">
+        <span>
+          <button type="button" class="btn" id="tableBtn">
+            <i class="fab fa-trello d-inline p-2 text-white"></i>Tableros</button>
+        </span>
       </div>
-      <div class="col-2 justify-content-center p-0">
+      <div class="col-2">
         <div class="input-group mt-1">
-          <input type="text" class="form-control">
+            <input type="text" class="form-control">
           <div class="input-group-append">
             <span class="input-group-text">
               <i class="fas fa-search"></i>
@@ -31,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6 justify-content-center">
+      <div class="col-6">
         <span>
           <img src="src/img/logoTrello.png" class="img-fluid" id="logoTrello" alt="Logo">
         </span>
@@ -43,8 +45,8 @@
         <button class="btn pl-2 pr-2 pb-1 pt-1">
           <i class="fas fa-info-circle text-white"></i>
         </button>
-        <button class="btn pl-2 pr-2 pb-1 pt-1">
-          <i class="far fa-bell text-white"></i>
+        <button class="btn bell pl-2 pr-2 pb-1 pt-1">
+          <i class="far bell fa-bell text-white"></i>
         </button>
         <button class="btn pl-2 pr-2 pb-1 pt-1" id="btnName">
           <span class="text-center text-white">MJ</span>
@@ -57,24 +59,23 @@
   <div class="container-fluid">
     <div class="row" id="bottom">
       <span>
-        <h6>Tablero-Reto de código</h6>
+        <button class="btn btn-table">Tablero</button>
       </span>
       <span>
-        <i class="far fa-star"></i>
+        <button class="btn btn-table"><i class="far fa-star"></i></button>
       </span>
       <span>
-        <i class="fas fa-lock"></i>
+        <button class="btn btn-table"><i class="fas fa-lock"></i></button>
       </span>
       <span>
-        <p class="text-right">
-          <i class="fas fa-ellipsis-h"></i>Mostrar menú</p>
+        <span><button class="btn btn-table-menu"><i class="fas fa-ellipsis-h"></i>Mostrar menú</button></span>
       </span>
     </div>
   </div>
 
   <!--Cuerpo del trabajo, donde van a ir las divisiones-->
   <div class="container-fluid" id="board">
-    <div class="list-wrapper">
+    <div class="list-wrapper" id="boxList">
       <div class="input-group mb-3" id="addInput">
 
         <!--Input que desaparece-->
@@ -94,6 +95,16 @@
       </div>
     </div>
   </div>
+
+
+
+
+  <!-- Nueva maquetación -->
+  <div id="contentTitleList"></div>
+  <div id="contentAddList">
+    <button class="btn" onclick="window.view.addList()">Añadir lista</button>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
