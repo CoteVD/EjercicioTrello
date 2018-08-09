@@ -1,7 +1,9 @@
 window.view = {};
+
+//Función para que aparezca el input para poner el nombre a la lista
 window.view.newList = () => {
   document.getElementById('inputTitle').style.display = 'none';
-  document.getElementById('addInput').innerHTML = `
+  document.getElementsByClassName('addInput').innerHTML = `
   <div class="input-group mb-3" id="firstAdd">
     <input type="text" class="form-control" placeholder="Introduzca el título de la lista..." aria-label="Username" aria-describedby="basic-addon1" id="listTitle">
     <button type="button" class="btn btn-success" id="btnAddList" onclick="window.view.addList()">Añadir lista</button>
@@ -9,6 +11,7 @@ window.view.newList = () => {
   `
 }
 
+//Función para agregar el nombre de la lista y dar la opción de agregar una tarjeta
 window.view.addList = () => {
   document.getElementById('firstAdd').style.display = 'none';
   const header = document.getElementById('listTitle').value;
@@ -19,6 +22,7 @@ window.view.addList = () => {
   `
 }
 
+//Función que despliega el textarea para escribir la tarjeta  
 window.view.addTask = () => {
   document.getElementById('newTask').style.display = 'none';
   document.getElementById('textAddList').innerHTML = `
@@ -29,6 +33,7 @@ window.view.addTask = () => {
   `
 }
 
+//Función para agregar la tarjeta a la lista
 window.view.add = () => {
 
   document.getElementById('newList').style.display = 'block';
@@ -43,8 +48,9 @@ window.view.add = () => {
   `
 }
 
+//Función ocultar el texto de "+ Añada otra tarjeta" del HTML y que muestre nuevamente el Textarea
 window.view.addCard = () => {
+
   document.getElementById('newList').style.display = 'none';
   document.getElementById('textAddList').style.display = 'block';
 }
-
