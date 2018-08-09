@@ -3,7 +3,7 @@ window.view = {};
 //Función para que aparezca el input para poner el nombre a la lista
 window.view.newList = () => {
   document.getElementById('inputTitle').style.display = 'none';
-  document.getElementsByClassName('addInput').innerHTML = `
+  document.getElementById('addInput').innerHTML = `
   <div class="input-group mb-3" id="firstAdd">
     <input type="text" class="form-control" placeholder="Introduzca el título de la lista..." aria-label="Username" aria-describedby="basic-addon1" id="listTitle">
     <button type="button" class="btn btn-success" id="btnAddList" onclick="window.view.addList()">Añadir lista</button>
