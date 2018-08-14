@@ -17,15 +17,15 @@
   <!--Barra de arriba con el input y los botones. No funcionales.-->
   <div class="container-fluid">
     <div class="row" id="topRow">
-      <div class="col-1">
+      <div class="col-1 pl-0">
         <span>
-          <button type="button" class="btn" id="tableBtn">
+          <button type="button" class="btn m-1" id="tableBtn">
             <i class="fab fa-trello d-inline p-2 text-white"></i>Tableros</button>
         </span>
       </div>
-      <div class="col-2">
+      <div class="col-2 pl-0">
         <div class="input-group mt-1">
-            <input type="text" class="form-control">
+          <input type="text" class="form-control">
           <div class="input-group-append">
             <span class="input-group-text">
               <i class="fas fa-search"></i>
@@ -34,22 +34,20 @@
         </div>
       </div>
       <div class="col-6">
-        <span>
-          <img src="src/img/logoTrello.png" class="img-fluid" id="logoTrello" alt="Logo">
-        </span>
+        <img src="src/img/logoTrello.png" class="img-fluid mt-1" id="logoTrello" alt="Logo">
       </div>
-      <div class="col-3 float-right">
-        <button class="btn pl-2 pr-2 pb-1 pt-1">
-          <i class="fas fa-plus text-white"></i>
+      <div class="col-3 pr-0">
+        <button class="btn float-right pl-2 pr-2 pb-1 pt-1 mt-1 mb-1 mr-1 ml-0" id="btnName">
+          <span class="text-center text-white">MJ</span>
         </button>
-        <button class="btn pl-2 pr-2 pb-1 pt-1">
-          <i class="fas fa-info-circle text-white"></i>
-        </button>
-        <button class="btn bell pl-2 pr-2 pb-1 pt-1">
+        <button class="btn bell float-right pl-2 pr-2 pb-1 pt-1 mt-1 mb-1 mr-1">
           <i class="far bell fa-bell text-white"></i>
         </button>
-        <button class="btn pl-2 pr-2 pb-1 pt-1" id="btnName">
-          <span class="text-center text-white">MJ</span>
+        <button class="btn btn-small float-right pl-2 pr-2 pb-1 pt-1 mt-1 mb-1 mr-1">
+          <i class="fas fa-info-circle text-white"></i>
+        </button>
+        <button class="btn btn-small float-right pl-2 pr-2 pb-1 pt-1 mt-1 mb-1 mr-1">
+          <i class="fas fa-plus text-white"></i>
         </button>
       </div>
     </div>
@@ -58,25 +56,34 @@
   <!--Row con título, pero sin funcionalidades-->
   <div class="container-fluid">
     <div class="row" id="bottom">
-      <span>
-        <button class="btn btn-table">Tablero</button>
-      </span>
-      <span>
-        <button class="btn btn-table"><i class="far fa-star"></i></button>
-      </span>
-      <span>
-        <button class="btn btn-table"><i class="fas fa-lock"></i></button>
-      </span>
-      <span>
-        <span><button class="btn btn-table-menu"><i class="fas fa-ellipsis-h"></i>Mostrar menú</button></span>
-      </span>
+      <div class="col-6 pl-0">
+        <span>
+          <button class="btn btn-table">Tablero</button>
+        </span>
+        <span>
+          <button class="btn btn-table">
+            <i class="far fa-star"></i>
+          </button>
+        </span>
+        <span>
+          <button class="btn btn-table">
+            <i class="fas fa-lock"></i>
+          </button>
+        </span>
+      </div>
+      <div class="col-6">
+        <span>
+          <button class="btn btn-table-menu float-right mt-1">
+            <i class="fas fa-ellipsis-h"></i>Mostrar menú</button>
+        </span>
+      </div>
     </div>
   </div>
 
   <!--Cuerpo del trabajo, donde van a ir las divisiones-->
-  <div class="container-fluid" id="board">
-    <div class="list-wrapper" id="boxList">
-      <div class="input-group mb-3" id="addInput">
+  <div class="container-fluid pl-1" id="board">
+    <div class="list" id="boxList">
+      <div class="input-group mb-0" id="addInput">
 
         <!--Input que desaparece-->
         <input type="text" class="form-control" placeholder="Añadir una lista" aria-label="Username" aria-describedby="basic-addon1"
@@ -94,15 +101,6 @@
       <div id="textAddList">
       </div>
     </div>
-  </div>
-
-
-
-
-  <!-- Nueva maquetación -->
-  <div id="contentTitleList"></div>
-  <div id="contentAddList">
-    <button class="btn" onclick="window.view.addList()">Añadir lista</button>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

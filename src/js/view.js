@@ -1,43 +1,5 @@
 window.view = {};
 
-window.view.addList = () =>{
-  let contentAddList = document.getElementById('contentAddList');
-  contentAddList.innerHTML = `
-  <input type="text" id="titleList" placeholder="Ingresar nombre de lista"></input>
-  <button onclick="window.view.addNewTitleList()">Añadir nueva lista</button>
-  <button onclick="window.view.resetContentList()">X</button>
-  `;
-}
-
-window.view.resetContentList=()=>{
-  let contentAddList = document.getElementById('contentAddList');
-  contentAddList.innerHTML = `
-  <button class="btn" onclick="window.view.addList()">Añadir lista</button>
-  `;
-}
-
-window.view.addNewTitleList=()=>{
-  let titleList = document.getElementById('titleList').value;
-  let contentTitleList = document.getElementById('contentTitleList');
-  contentTitleList.innerHTML = `
-  <div>
-    <h6>${titleList}</h6>
-    <div id="textArea">
-    <button onclick="window.view.addNewCard()">+ Añadir nueva tarea</button>
-    </div>
-    
-  </div>
-  `
-}
-
-window.view.addNewCard =()=>{
-  let textArea = document.getElementById('textArea');
-  textArea.innerHTML = `
-  <textarea placeholder="Escribe tu mierda aqui"></textarea>
-  <button class="btn">Ingresar texto del textarea</button>
-  `
-}
-/*
 //Función para que aparezca el input para poner el nombre a la lista
 window.view.newList = () => {
   document.getElementById('addInput').innerHTML = `
@@ -79,7 +41,7 @@ window.view.add = () => {
   cards.appendChild(list);
   list.innerHTML += `
   <div class="container">
-    <p class="list-group-item">${card}</p>
+    <p class="list-card">${card}</p>
   </div>
   `
 }
@@ -90,4 +52,3 @@ window.view.addCard = () => {
   document.getElementById('newList').style.display = 'none';
   document.getElementById('textAddList').style.display = 'block';
 }
-*/
