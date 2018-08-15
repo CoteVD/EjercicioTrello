@@ -29,9 +29,8 @@ window.view.addList = () => {
     document.getElementById('cardBox').innerHTML = `
   <div class="list" id="cardList">
     <h6 class="text-white pt-2 pl-2">${header}</h6>
-    <br>
-    <p id="newCard"></p>
-    <p id="newTask" class="pl-1" onclick="window.view.addTask()">+ Añada una tarjeta</p>
+    <div id="newCard"></div>
+    <div id="newTask" class="pl-1 mb-2" onclick="window.view.addTask()">+ Añada una tarjeta</div>
   </div>
   `
   } else { }
@@ -42,7 +41,6 @@ window.view.addTask = () => {
   document.getElementById('newTask').innerHTML = `
   <div class="form-group" id="cardTitle">
     <input type="text" placeholder="Introduzca un título para esta tarjeta..." aria-label="Username" aria-describedby="basic-addon1" id="cardInput">
-    <br>
     <button type="button" class="btn btn-success" onclick="window.view.add()">Añadir tarjeta</button>
     <button type="button" class="btn" id="btnGoBack" onclick="window.view.goBackOnList()">X</button>
   </div>
@@ -50,19 +48,20 @@ window.view.addTask = () => {
 }
 
 window.view.goBackOnList = () => {
-  document.getElementById('cardList').innerHTML = `
-  <p id="newTask" class="pl-1" onclick="window.view.addTask()">+ Añada una tarjeta</p>
+  document.getElementById('newTask').innerHTML = `
+  <div id="newTask" class="pl-1" onclick="window.view.addTask()">+ Añada una tarjeta</div>
   `
 }
 
+
 //Función para agregar la tarjeta a la lista
 window.view.add = () => {
-  if (cardInput.value !== '') {
+  /*if (cardInput.value !== '') {*/
     let card = document.getElementById('cardInput').value;
     document.getElementById('newCard').innerHTML += `
   <div class="container">
     <p class="list-card">${card}</p>
   </div>
   `
-  } else { }
+  /*} else { }*/
 }
