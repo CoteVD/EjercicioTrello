@@ -1,3 +1,4 @@
+/* Parte de la página que no es funcional */
 body{
   background-color: #0079BF;
   background-size: cover;
@@ -21,13 +22,6 @@ body{
   padding-left: 0px;
 }
 
-#inputTitle{
-  background-color: hsla(0,0%,100%,.3);
-  border-radius: 3px;
-  border: none;
-  color: hsla(0,0%,100%,.5);  
-}
-
 .form-control {
   background-color: hsla(0,0%,100%,.3);
   border-radius: 3px;
@@ -35,7 +29,7 @@ body{
   color: hsla(0,0%,100%,.5);
   float: left;
   font-size: 13px;
-  height: 32px;
+  height: 34px;
   margin: 0;
   min-height: 32px;
   padding-right: 32px;
@@ -108,6 +102,17 @@ body{
   margin-left: 544px;
 }
 
+/* Parte de las tarjetas */
+#inputTitle{
+  background: hsla(0,0%,100%,.3);
+  color: gray;
+  border: none; 
+  height: 34px;
+  width: 272px;
+  padding-left: 10px;
+  text-align: start;
+}
+
 .list {
   background: #e2e4e6;
   border-radius: 3px;
@@ -133,4 +138,35 @@ body{
   position: relative;
   text-decoration: none;
   z-index: 0;
+}
+
+#newTask {
+  color: gray;
+}
+
+#listTitle {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 3px;
+  width: 262px;
+  border: none;
+}
+
+#btnBack {
+  color: gray;
+  background-color: #e2e4e6;
+}
+
+#btnGoBack {
+  color: gray;
+  background-color: #e2e4e6; 
+}
+
+#cardInput {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 3px;
+  width: 262px;
+  border: none;
 }

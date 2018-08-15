@@ -81,28 +81,12 @@
   </div>
 
   <!--Cuerpo del trabajo, donde van a ir las divisiones-->
-  <div class="container-fluid pl-1" id="board">
-    <div class="list" id="boxList">
-      <div class="input-group mb-0" id="addInput">
-
-        <!--Input que desaparece-->
-        <input type="text" class="form-control" placeholder="Añadir una lista" aria-label="Username" aria-describedby="basic-addon1"
-          id="inputTitle" onclick="window.view.newList()">
-      </div>
-
-      <!--Div de las tarjetas-->
-      <div id="cards">
-      </div>
-
-      <!--Párrafo para añadir otra tarjeta. Está por default oculto.-->
-      <p id="newList" onclick="window.view.addCard()">+ Añada otra tarjeta</p>
-
-      <!--Div del textarea-->
-      <div id="textAddList">
-      </div>
+  <div class="container-fluid pl-1">
+    <div class="row">
+      <div class="col-3 mb-0" id="cardBox">
+      </div>      
     </div>
   </div>
-
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"

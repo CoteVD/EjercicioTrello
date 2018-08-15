@@ -1,54 +1,68 @@
 window.view = {};
+//Boton del comienzo para aparecer el input
+document.getElementById('cardBox').innerHTML = `
+<button class="btn" id="inputTitle" onclick="window.view.newList()">+ Añada una lista</button>
+`
 
 //Función para que aparezca el input para poner el nombre a la lista
 window.view.newList = () => {
-  document.getElementById('addInput').innerHTML = `
-  <div class="input-group mb-3" id="firstAdd">
-    <input type="text" class="form-control" placeholder="Introduzca el título de la lista..." aria-label="Username" aria-describedby="basic-addon1" id="listTitle">
-    <button type="button" class="btn btn-success" id="btnAddList" onclick="window.view.addList()">Añadir lista</button>
+  document.getElementById('cardBox').innerHTML = `
+  <div class="list mb-3" id="firstAdd">
+    <input type="text" placeholder="Introduzca el título de la lista..." aria-label="Username" aria-describedby="basic-addon1" id="listTitle">
+    <button type="button" class="btn btn-success ml-1 mb-0" id="btnAddList" onclick="window.view.addList()">Añadir lista</button>
+    <button type="button" class="btn" id="btnBack" onclick="window.view.goBack()">X</button>
   </div>
+  `
+}
+
+//Función para volver al boton de inicio
+window.view.goBack = () => {
+  document.getElementById('cardBox').innerHTML = `
+  <button class="btn" id="inputTitle" onclick="window.view.newList()">+ Añada una lista</button>
   `
 }
 
 //Función para agregar el nombre de la lista y dar la opción de agregar una tarjeta
 window.view.addList = () => {
-  const header = document.getElementById('listTitle').value;
-  document.getElementById('addInput').innerHTML = `
-  <h6>${header}</h6>
-  <br>
-  <p id="newTask" onclick="window.view.addTask()">+ Añada una tarjeta</p>
+  let header = document.getElementById('listTitle').value;
+  if (listTitle.value !== '') {
+    document.getElementById('cardBox').innerHTML = `
+  <div class="list" id="cardList">
+    <h6 class="text-white pt-2 pl-2">${header}</h6>
+    <br>
+    <p id="newCard"></p>
+    <p id="newTask" class="pl-1" onclick="window.view.addTask()">+ Añada una tarjeta</p>
+  </div>
   `
+  } else { }
 }
 
 //Función que despliega el textarea para escribir la tarjeta  
 window.view.addTask = () => {
-  document.getElementById('newTask').style.display = 'none';
-  document.getElementById('textAddList').innerHTML = `
-  <div class="form-group">
-    <textarea class="form-control" rows="5" id="newText"></textarea><br>
+  document.getElementById('newTask').innerHTML = `
+  <div class="form-group" id="cardTitle">
+    <input type="text" placeholder="Introduzca un título para esta tarjeta..." aria-label="Username" aria-describedby="basic-addon1" id="cardInput">
+    <br>
     <button type="button" class="btn btn-success" onclick="window.view.add()">Añadir tarjeta</button>
+    <button type="button" class="btn" id="btnGoBack" onclick="window.view.goBackOnList()">X</button>
   </div>
+  `
+}
+
+window.view.goBackOnList = () => {
+  document.getElementById('cardList').innerHTML = `
+  <p id="newTask" class="pl-1" onclick="window.view.addTask()">+ Añada una tarjeta</p>
   `
 }
 
 //Función para agregar la tarjeta a la lista
 window.view.add = () => {
-
-  document.getElementById('newList').style.display = 'block';
-  const card = document.getElementById('newText').value;
-  document.getElementById('textAddList').style.display = 'none';
-  const list = document.createElement('div');
-  cards.appendChild(list);
-  list.innerHTML += `
+  if (cardInput.value !== '') {
+    let card = document.getElementById('cardInput').value;
+    document.getElementById('newCard').innerHTML += `
   <div class="container">
     <p class="list-card">${card}</p>
   </div>
   `
-}
-
-//Función ocultar el texto de "+ Añada otra tarjeta" del HTML y que muestre nuevamente el Textarea
-window.view.addCard = () => {
-
-  document.getElementById('newList').style.display = 'none';
-  document.getElementById('textAddList').style.display = 'block';
+  } else { }
 }
