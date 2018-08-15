@@ -28,7 +28,7 @@ window.view.addList = () => {
   if (listTitle.value !== '') {
     document.getElementById('cardBox').innerHTML = `
   <div class="list" id="cardList">
-    <h6 class="pt-2 pl-2">${header}</h6>
+    <h6 class="pt-2 pl-2 ml-1">${header}</h6>
     <div id="newCard"></div>
     <div id="newSpace">
       <p id="newTask" class="pl-1 mb-2" onclick="window.view.addTask()">+ Añada una tarjeta</p>
@@ -60,7 +60,7 @@ window.view.add = () => {
   if (cardInput.value !== '') {
     let card = document.getElementById('cardInput').value;
     document.getElementById('newCard').innerHTML += `
-  <div class="container-fluid pl-1 pr-1">
+  <div class="container-fluid pl-2 pr-2">
     <p class="list-card p-1">${card}</p>
   </div>
   `
