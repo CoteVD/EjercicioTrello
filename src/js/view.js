@@ -25,9 +25,9 @@ window.view.addList = () => {
     document.getElementById('cardBox').innerHTML += `
   <div class="list d-inline-block" id="cardList${idNum}">
     <h6 class="pt-2 pl-2 ml-1">${header}</h6>
-    <div id="newCard"></div>
-    <div id="newSpace">
-      <p id="newTask" class="pl-1 mb-2" onclick="window.view.addTask(${idNum})">+ Añada una tarjeta</p>
+    <div id="newCard${idNum}"></div>
+    <div id="newSpace${idNum}">
+      <p id="newTask${idNum}" class="newTask pl-1 mb-2" onclick="window.view.addTask(${idNum})">+ Añada una tarjeta</p>
     </div>    
   </div>
   `
@@ -37,26 +37,26 @@ window.view.addList = () => {
 
 //Función que despliega el textarea para escribir la tarjeta  
 window.view.addTask = (idNum) => {
-  document.getElementById('newSpace').innerHTML = `
+  document.getElementById('newSpace'+idNum).innerHTML = `
     <input type="text" id="cardInput" placeholder="Introduzca un título para esta tarjeta...">
     <button type="button" class="btn btn-success ml-1 mb-2" onclick="window.view.add()">Añadir tarjeta</button>
-    <button type="button" class="btn" id="btnGoBack" onclick="window.view.goBackOnList()">X</button>
+    <button type="button" class="btn" id="btnGoBack" onclick="window.view.goBackOnList(${idNum})">X</button>
   `
 }
 
-window.view.goBackOnList = () => {
-  document.getElementById('newSpace').innerHTML = `
+window.view.goBackOnList = (idNum) => {
+  document.getElementById('newSpace'+idNum).innerHTML = `
   <div id="newTask" class="pl-1 mb-2" onclick="window.view.addTask()">+ Añada una tarjeta</div>
   `
 }
 
 
 //Función para agregar la tarjeta a la lista
-window.view.add = () => {
+window.view.add = (idNum) => {
   if (cardInput.value !== '') {
     let card = document.getElementById('cardInput').value;
-    document.getElementById('newCard').innerHTML += `
-  <div class="container-fluid pl-2 pr-2">
+    document.getElementById('newCard'+idNum).innerHTML += `
+  <div class="container-fluid pl-2 pr-2" id="thisCard">
     <p class="list-card p-1">${card}</p>
   </div>
   `
