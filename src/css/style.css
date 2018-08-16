@@ -116,28 +116,18 @@ body{
 .list {
   background: #e2e4e6;
   border-radius: 3px;
-  box-sizing: border-box;
   width: 272px;
   margin: 0 4px;
   height: 100%;
-  display: inline-block;
-  flex-direction: column;
-  position: relative;
-  white-space: normal;
 }
 
 .list-card {
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 1px 0 #ccc;
-  cursor: pointer;
-  display: block;
   margin-bottom: 8px;
   max-width: 300px;
   min-height: 20px;
-  position: relative;
-  text-decoration: none;
-  z-index: 0;
 }
 
 #newTask {
