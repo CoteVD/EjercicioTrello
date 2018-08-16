@@ -4,7 +4,7 @@ window.view.newList = () => {
   document.getElementById('addList').innerHTML = `
   <div class="list d-inline-block mb-3" id="firstAdd">
     <input type="text" placeholder="Introduzca el título de la lista..." id="listTitle">
-    <button type="button" class="btn btn-success ml-1 mb-0" id="btnAddList" onclick="window.view.addList()">Añadir lista</button>
+    <button type="button" class="btn btn-success ml-1 mb-2" id="btnAddList" onclick="window.view.addList()">Añadir lista</button>
     <button type="button" class="btn" id="btnBack" onclick="window.view.goBack()">X</button>
   </div>
   `
@@ -25,9 +25,9 @@ window.view.addList = () => {
     document.getElementById('cardBox').innerHTML += `
   <div class="list d-inline-block" id="cardList${idNum}">
     <h6 class="pt-2 pl-2 ml-1">${header}</h6>
-    <div id="newCard${idNum}"></div>
-    <div id="newSpace${idNum}">
-      <p id="newTask" class="pl-1 mb-2" onclick="window.view.addTask()">+ Añada una tarjeta</p>
+    <div id="newCard"></div>
+    <div id="newSpace">
+      <p id="newTask" class="pl-1 mb-2" onclick="window.view.addTask(${idNum})">+ Añada una tarjeta</p>
     </div>    
   </div>
   `
@@ -36,7 +36,7 @@ window.view.addList = () => {
 }
 
 //Función que despliega el textarea para escribir la tarjeta  
-window.view.addTask = () => {
+window.view.addTask = (idNum) => {
   document.getElementById('newSpace').innerHTML = `
     <input type="text" id="cardInput" placeholder="Introduzca un título para esta tarjeta...">
     <button type="button" class="btn btn-success ml-1 mb-2" onclick="window.view.add()">Añadir tarjeta</button>
