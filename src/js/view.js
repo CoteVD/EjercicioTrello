@@ -27,7 +27,7 @@ window.view.addList = () => {
     <h6 class="pt-2 pl-2 ml-1">${header}</h6>
     <div id="newCard${idNum}"></div>
     <div id="newSpace${idNum}">
-      <p id="newTask${idNum}" class="newTask pl-1 mb-2" onclick="window.view.addTask(${idNum})">+ Añada una tarjeta</p>
+      <p id="newTask" class="newTask pl-1 mb-2" onclick="window.view.addTask(${idNum})">+ Añada una tarjeta</p>
     </div>    
   </div>
   `
@@ -39,14 +39,15 @@ window.view.addList = () => {
 window.view.addTask = (idNum) => {
   document.getElementById('newSpace'+idNum).innerHTML = `
     <input type="text" id="cardInput" placeholder="Introduzca un título para esta tarjeta...">
-    <button type="button" class="btn btn-success ml-1 mb-2" onclick="window.view.add()">Añadir tarjeta</button>
+    <button type="button" class="btn btn-success ml-1 mb-2" onclick="window.view.add(${idNum})">Añadir tarjeta</button>
     <button type="button" class="btn" id="btnGoBack" onclick="window.view.goBackOnList(${idNum})">X</button>
   `
 }
 
+//Función para volver a la opción de añadir una tarjeta
 window.view.goBackOnList = (idNum) => {
   document.getElementById('newSpace'+idNum).innerHTML = `
-  <div id="newTask" class="pl-1 mb-2" onclick="window.view.addTask()">+ Añada una tarjeta</div>
+  <div id="newTask" class="newAddCard pl-1 mb-2" onclick="window.view.addTask(${idNum})">+ Añada una tarjeta</div>
   `
 }
 

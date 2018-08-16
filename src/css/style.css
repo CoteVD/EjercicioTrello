@@ -129,6 +129,10 @@ body{
   min-height: 20px;
 }
 
+.newAddCard {
+  color: gray;  
+}
+
 .newTask {
   color: gray;
 }
