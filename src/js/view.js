@@ -20,14 +20,15 @@ window.view.goBack = () => {
 //Función para agregar el nombre de la lista y dar la opción de agregar una tarjeta
 window.view.addList = () => {
   let header = document.getElementById('listTitle').value;
-  let idNum = document.getElementsByClassName('numDivs').length;
+  let idNum = document.getElementsByClassName('list').length;
+  console.log(idNum)
   if (listTitle.value !== '') {
     document.getElementById('cardBox').innerHTML += `
   <div class="list d-inline-block" id="cardList${idNum}">
     <h6 class="pt-2 pl-2 ml-1">${header}</h6>
     <div id="newCard${idNum}"></div>
     <div id="newSpace${idNum}">
-      <p id="newTask" class="newTask pl-1 mb-2" onclick="window.view.addTask(${idNum})">+ Añada una tarjeta</p>
+      <p id="newTask${idNum}" class="newTask pl-1 mb-2" onclick="window.view.addTask(${idNum})">+ Añada una tarjeta</p>
     </div>    
   </div>
   `
@@ -57,7 +58,7 @@ window.view.add = (idNum) => {
   if (cardInput.value !== '') {
     let card = document.getElementById('cardInput').value;
     document.getElementById('newCard'+idNum).innerHTML += `
-  <div class="container-fluid pl-2 pr-2" id="thisCard">
+  <div class="container-fluid pl-2 pr-2" id="thisCard${idNum}">
     <p class="list-card p-1">${card}</p>
   </div>
   `
