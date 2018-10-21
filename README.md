@@ -1,6 +1,6 @@
 # Ejercicio Trello
 ## Descripción
-Trabajo que emula el famoso sitio de organización.
+Trabajo que emula el famoso sitio de organización Trello.
 ## Instrucciones
 1. Seleccionar el botón añada una lista y escriba el nombre de la lista. 
 2. Luego de añadir el nombre de la lista, agregue una tarjeta con el botón añada una tarjeta.
