@@ -1,45 +1,177 @@
-#tableBtn, #tableInput {
+/* Parte de la página que no es funcional */
+body{
+  background-color: #0079BF;
+  background-size: cover;
+  background-position: center center;
+	background-attachment: fixed;
+}
+
+.bell {
+  background-color: #00C2E0;
+}
+
+#tableBtn  {
+  background-color: hsla(0,0%,100%,.3);
+  color:#fff;
   border-radius: 3px;
+  font-weight: 700;
+  line-height: 32px;
+  padding-right: 5px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+}
+
+.form-control {
+  background-color: hsla(0,0%,100%,.3);
+  border-radius: 3px;
+  border: none;
+  color: hsla(0,0%,100%,.5);
+  float: left;
+  font-size: 13px;
+  height: 34px;
+  margin: 0;
+  min-height: 32px;
+  padding-right: 32px;
+  padding-left: 8px;
+  line-height: 19px;
+  transition: width .15s;
+  width: 180px;
+  z-index: 1;
+}
+
+.btn-small {
+  transition: .1s ease;
+  background: hsla(0,0%,100%,.3);
+}
+
+.btn-table {
+  background-color: #0079BF;
+  font-weight: 700;
+  color: #F6F6F6;
+  padding: 5px;
+  margin:5px;  
+}
+
+.btn-table:hover{
+  background-color:#0067A3;
+}
+
+.btn-table-menu{
+  background-color: #0079BF;
+  color: #F6F6F6;
+}
+
+.btn-table-menu:hover{
+  background-color:#0067A3;
+}
+
+.input-group-text{
+  border: none;
+  background-color: hsla(0,0%,100%,.3); 
+  color:#fff;
 }
 
 #topRow {
-  background-color: black;
+  background-color:#0067A3;
 }
 
-#bottom {
-  background-color: gray;
-}
-
-#logoTrello {
-  width: 10%;
+#logoTrello {  
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAeCAMAAACMnWmDAAACOlBMV…fSg7/x+x9a9Sf8tWb332QHQ+WEwToyWHAoBhDp5f/gmn8Ard3CvkoCRlIAAAAASUVORK5CYII=);
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: 80px 30px;
+  height: 30px;
+  position: absolute;
+  right: 278px;
+  top: 0;
+  width: 80px;
 }
 
 #btnName {
   border-radius: 20px;
+  transition: .1s ease;
+  background: hsla(0,0%,100%,.3);
+}
+
+#newList{
+  display: none;
 }
 
 .text-right {
   margin-left: 544px;
 }
 
-.list-wrapper {
-  background-color: blueviolet;
+/* Parte de las tarjetas */
+#inputTitle{
+  background: hsla(0,0%,100%,.3);
+  color: gray;
+  border: none; 
+  height: 34px;
   width: 272px;
-  margin: 0 4px;
-  height: 100%;
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
+  text-align: start;
 }
 
-.list-group-item {
+.list {
+  vertical-align: top;
   background: #e2e4e6;
   border-radius: 3px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  max-height: 100%;
-  position: relative;
-  white-space: normal;
+  width: 272px;
+  margin: 0 4px;
+}
+
+.list-card {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #ccc;
+  margin-bottom: 8px;
+  max-width: 300px;
+  min-height: 20px;
+}
+
+.newAddCard {
+  color: gray;  
+}
+
+.newTask {
+  color: gray;
+}
+
+#listTitle {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 3px;
+  width: 262px;
+  border: none;
+}
+
+#cardInput {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 3px;
+  width: 262px;
+  border: none;
+}
+
+#btnBack {
+  color: gray;
+  background-color: #e2e4e6;
+}
+
+#btnGoBack {
+  color: gray;
+  background-color: #e2e4e6; 
+}
+
+#cardInput {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 3px;
+  width: 262px;
+  border: none;
+}
+
+#cardBox {
+  margin-left: 20px;
 }

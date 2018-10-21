@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Trello</title>
+  <!--<div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
+  <link rel="icon" type="image/gif/png" href="src/img/trello.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
@@ -14,13 +16,16 @@
 </head>
 
 <body>
+  <!--Barra de arriba con el input y los botones. No funcionales.-->
   <div class="container-fluid">
     <div class="row" id="topRow">
-      <div class="col-1 justify-content-center p-0 mr-1 mb-0">
-        <button type="button" class="btn ml-1 mt-1 pl-0 pt-1 pb-1 pr-2 text-white" id="tableBtn">
-          <i class="fab fa-trello d-inline p-2 text-white"></i>Tableros</button>
+      <div class="col-1 pl-0">
+        <span>
+          <button type="button" class="btn m-1" id="tableBtn">
+            <i class="fab fa-trello d-inline p-2 text-white"></i>Tableros</button>
+        </span>
       </div>
-      <div class="col-2 justify-content-center p-0">
+      <div class="col-2 pl-0">
         <div class="input-group mt-1">
           <input type="text" class="form-control">
           <div class="input-group-append">
@@ -30,63 +35,72 @@
           </div>
         </div>
       </div>
-      <div class="col-6 justify-content-center">
-        <span>
-          <img src="src/img/logoTrello.png" class="img-fluid" id="logoTrello" alt="Logo">
-        </span>
+      <div class="col-6">
+        <img src="src/img/logoTrello.png" class="img-fluid mt-1" id="logoTrello" alt="Logo">
       </div>
-      <div class="col-3 float-right">
-        <button class="btn pl-2 pr-2 pb-1 pt-1">
-          <i class="fas fa-plus text-white"></i>
-        </button>
-        <button class="btn pl-2 pr-2 pb-1 pt-1">
-          <i class="fas fa-info-circle text-white"></i>
-        </button>
-        <button class="btn pl-2 pr-2 pb-1 pt-1">
-          <i class="far fa-bell text-white"></i>
-        </button>
-        <button class="btn pl-2 pr-2 pb-1 pt-1" id="btnName">
+      <div class="col-3 pr-0">
+        <button class="btn float-right pl-2 pr-2 pb-1 pt-1 mt-1 mb-1 mr-1 ml-0" id="btnName">
           <span class="text-center text-white">MJ</span>
         </button>
+        <button class="btn bell float-right pl-2 pr-2 pb-1 pt-1 mt-1 mb-1 mr-1">
+          <i class="far bell fa-bell text-white"></i>
+        </button>
+        <button class="btn btn-small float-right pl-2 pr-2 pb-1 pt-1 mt-1 mb-1 mr-1">
+          <i class="fas fa-info-circle text-white"></i>
+        </button>
+        <button class="btn btn-small float-right pl-2 pr-2 pb-1 pt-1 mt-1 mb-1 mr-1">
+          <i class="fas fa-plus text-white"></i>
+        </button>
       </div>
     </div>
   </div>
+
+  <!--Row con título, pero sin funcionalidades-->
   <div class="container-fluid">
     <div class="row" id="bottom">
-      <span>
-        <h6>Tablero-Reto de código</h6>
-      </span>
-      <span>
-        <i class="far fa-star"></i>
-      </span>
-      <span>
-        <i class="fas fa-lock"></i>
-      </span>
-      <span>
-        <p class="text-right">
-          <i class="fas fa-ellipsis-h"></i>Mostrar menú</p>
-      </span>
-    </div>
-  </div>
-  <div class="container-fluid" id="board">
-    <div class="list-wrapper">
-      <div class="input-group mb-3" id="addInput">
-        <input type="text" class="form-control" placeholder="Añadir una lista" aria-label="Username" aria-describedby="basic-addon1"
-          id="topInput" onclick="newList()">
+      <div class="col-6 pl-0">
+        <span>
+          <button class="btn btn-table">Tablero</button>
+        </span>
+        <span>
+          <button class="btn btn-table">
+            <i class="far fa-star"></i>
+          </button>
+        </span>
+        <span>
+          <button class="btn btn-table">
+            <i class="fas fa-lock"></i>
+          </button>
+        </span>
       </div>
-      <div id="cards">
-      </div>
-      <div class="cardLists" id="cardList">
+      <div class="col-6">
+        <span>
+          <button class="btn btn-table-menu float-right mt-1">
+            <i class="fas fa-ellipsis-h"></i>Mostrar menú</button>
+        </span>
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-  <script src="src/js/list.js"></script>
+
+  <!--Cuerpo del trabajo, donde van a ir las divisiones-->
+  <div class="container-fluid pl-1">
+    <div class="row">
+      <div class="col-auto p-0 mb-0" id="cardBox">
+      </div>
+      <div class="col-3 col-sm-12 col-md-5 col-lg-3 p-0 float-left">
+        <div id="addList">
+          <button class="btn" id="inputTitle" onclick="window.view.newList()">+ Añada una lista</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+    <script src="src/js/view.js"></script>
 </body>
 
 </html>
